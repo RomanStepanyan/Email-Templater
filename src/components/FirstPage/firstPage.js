@@ -15,14 +15,11 @@ const FirsPage = props => {
     const bodyText = [];
 
     const newSplit = props.bodyInput.match(/[^\s,.:;!?\n]+|[.,:;!?\n]/g);
-    // const newSplit = props.bodyInput.match(/[^\s,.:;!?\n]+|[.,:;!?\n]/g);
 
     if (newSplit && props.bodyArray) {
       newSplit.map(item => {
         const splittedItem = item.split(' ', 1);
-        if (/^[{][a-zA-Z]*[}]$/.test(splittedItem)) {
-          bodyText.push(...splittedItem);
-        }
+        bodyText.push(...splittedItem);
 
         const notNewVariables = !!props.bodyArray.find(
           variable => variable.toString() === splittedItem.toString(),
@@ -32,7 +29,7 @@ const FirsPage = props => {
         );
 
         if (
-          /^[{][a-zA-Z]*[}]$/.test(splittedItem) &&
+          /^[{][a-zA-Z0-9]*[}]$/.test(splittedItem) &&
           !notNewVariables &&
           !inBodyVariables
         ) {
@@ -85,8 +82,8 @@ const FirsPage = props => {
             placeholder="Please add the message"
             value={props.bodyInput.toString()}
             onChange={handleChange}
-            pattern="/^[{][a-zA-Z]*[}]/"
-            title="The variable can only consist of letters without apostrophes, dashes, spaces etc. For example {name}, but not {name,}"
+            // pattern="/^[{][a-zA-Z]*[}]/"
+            title="The variable can only consist of letters without apostrophes, dashes, spaces etc. For example {name} but not {name,}"
           />
         </label>
         <button type="submit" className={s.setButton}>
