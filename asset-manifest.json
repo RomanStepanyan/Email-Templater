@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/Email-Templater/static/css/main.5979b556.chunk.css",
-    "main.js": "/Email-Templater/static/js/main.513522f0.chunk.js",
-    "main.js.map": "/Email-Templater/static/js/main.513522f0.chunk.js.map",
+    "main.js": "/Email-Templater/static/js/main.8870f7d5.chunk.js",
+    "main.js.map": "/Email-Templater/static/js/main.8870f7d5.chunk.js.map",
     "runtime-main.js": "/Email-Templater/static/js/runtime-main.2285c4f1.js",
     "runtime-main.js.map": "/Email-Templater/static/js/runtime-main.2285c4f1.js.map",
     "static/css/2.f4c56af9.chunk.css": "/Email-Templater/static/css/2.f4c56af9.chunk.css",
-    "static/js/2.6f4b8acc.chunk.js": "/Email-Templater/static/js/2.6f4b8acc.chunk.js",
-    "static/js/2.6f4b8acc.chunk.js.map": "/Email-Templater/static/js/2.6f4b8acc.chunk.js.map",
+    "static/js/2.a10c7a68.chunk.js": "/Email-Templater/static/js/2.a10c7a68.chunk.js",
+    "static/js/2.a10c7a68.chunk.js.map": "/Email-Templater/static/js/2.a10c7a68.chunk.js.map",
     "static/js/3.d1b39340.chunk.js": "/Email-Templater/static/js/3.d1b39340.chunk.js",
     "static/js/3.d1b39340.chunk.js.map": "/Email-Templater/static/js/3.d1b39340.chunk.js.map",
     "index.html": "/Email-Templater/index.html",
     "static/css/2.f4c56af9.chunk.css.map": "/Email-Templater/static/css/2.f4c56af9.chunk.css.map",
     "static/css/main.5979b556.chunk.css.map": "/Email-Templater/static/css/main.5979b556.chunk.css.map",
-    "static/js/2.6f4b8acc.chunk.js.LICENSE.txt": "/Email-Templater/static/js/2.6f4b8acc.chunk.js.LICENSE.txt"
+    "static/js/2.a10c7a68.chunk.js.LICENSE.txt": "/Email-Templater/static/js/2.a10c7a68.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2285c4f1.js",
     "static/css/2.f4c56af9.chunk.css",
-    "static/js/2.6f4b8acc.chunk.js",
+    "static/js/2.a10c7a68.chunk.js",
     "static/css/main.5979b556.chunk.css",
-    "static/js/main.513522f0.chunk.js"
+    "static/js/main.8870f7d5.chunk.js"
   ]
 }
