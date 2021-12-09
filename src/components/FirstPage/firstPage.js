@@ -15,11 +15,14 @@ const FirsPage = props => {
     const bodyText = [];
 
     const newSplit = props.bodyInput.match(/[^\s,.:;!?\n]+|[.,:;!?\n]/g);
+    // const newSplit = props.bodyInput.match(/[^\s,.:;!?\n]+|[.,:;!?\n]/g);
 
     if (newSplit && props.bodyArray) {
       newSplit.map(item => {
         const splittedItem = item.split(' ', 1);
-        bodyText.push(...splittedItem);
+        if (/^[{][a-zA-Z]*[}]$/.test(splittedItem)) {
+          bodyText.push(...splittedItem);
+        }
 
         const notNewVariables = !!props.bodyArray.find(
           variable => variable.toString() === splittedItem.toString(),
@@ -29,7 +32,7 @@ const FirsPage = props => {
         );
 
         if (
-          /^[{][a-zA-Z0-9]*[}]$/.test(splittedItem) &&
+          /^[{][a-zA-Z]*[}]$/.test(splittedItem) &&
           !notNewVariables &&
           !inBodyVariables
         ) {
