@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Email-Templater/static/css/main.5979b556.chunk.css",
-    "main.js": "/Email-Templater/static/js/main.dbff226b.chunk.js",
-    "main.js.map": "/Email-Templater/static/js/main.dbff226b.chunk.js.map",
+    "main.js": "/Email-Templater/static/js/main.fb9fceac.chunk.js",
+    "main.js.map": "/Email-Templater/static/js/main.fb9fceac.chunk.js.map",
     "runtime-main.js": "/Email-Templater/static/js/runtime-main.2285c4f1.js",
     "runtime-main.js.map": "/Email-Templater/static/js/runtime-main.2285c4f1.js.map",
     "static/css/2.f4c56af9.chunk.css": "/Email-Templater/static/css/2.f4c56af9.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.f4c56af9.chunk.css",
     "static/js/2.a10c7a68.chunk.js",
     "static/css/main.5979b556.chunk.css",
-    "static/js/main.dbff226b.chunk.js"
+    "static/js/main.fb9fceac.chunk.js"
   ]
 }
