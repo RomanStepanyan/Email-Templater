@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin: 21px 26px 18px 21px;
+}
+.title {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+}

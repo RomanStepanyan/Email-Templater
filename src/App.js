@@ -1,23 +1,87 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import s from './App.module.css';
+
+import Header from './components/Header/Header';
+
+import Values from './components/Values/Values';
+
+import FirsPage from './components/FirstPage/firstPage';
+import Preview from './components/Preview/Preview';
+
+import { useState, useEffect } from 'react';
 
 function App() {
+  const initialState = ['{recipient}', '{subject}'];
+
+  const [bodyArray, setBodyArray] = useState(initialState);
+
+  const [bodyInput, setBodyInput] = useState(() => {
+    const saved = localStorage?.getItem('bodyText');
+    const storedValue = JSON.parse(saved);
+    return storedValue || '';
+  });
+
+  const [inputValues, setInputValues] = useState(() => {
+    const saved = localStorage?.getItem('inputValues');
+    const storedValue = JSON.parse(saved);
+    return storedValue || '';
+  });
+
+  const [splittedBodyInput, setSplittedBodyInput] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('bodyText', JSON.stringify(bodyInput));
+  }, [bodyInput]);
+
+  useEffect(() => {
+    localStorage.setItem('inputValues', JSON.stringify(inputValues));
+  }, [inputValues]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={s.container}>
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <FirsPage
+                bodyArray={bodyArray}
+                bodyInput={bodyInput}
+                setBodyArray={setBodyArray}
+                setBodyInput={setBodyInput}
+                initialState={initialState}
+                splittedBodyInput={splittedBodyInput}
+                setSplittedBodyInput={setSplittedBodyInput}
+              />
+            }
+          />
+          <Route
+            path="values"
+            element={
+              <Values
+                bodyArray={bodyArray}
+                bodyInput={bodyInput}
+                inputValues={inputValues}
+                setInputValues={setInputValues}
+              />
+            }
+          />
+          <Route
+            path="preview"
+            element={
+              <Preview
+                initialState={initialState}
+                bodyArray={bodyArray}
+                bodyInput={bodyInput}
+                inputValues={inputValues}
+                splittedBodyInput={splittedBodyInput}
+                setSplittedBodyInput={setSplittedBodyInput}
+              />
+            }
+          />
+        </Routes>
+      </div>
     </div>
   );
 }

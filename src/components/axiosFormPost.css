@@ -1,0 +1,56 @@
+.failed-toast > .Toastify__progress-bar-theme--light {
+  background: #ec5248;
+}
+
+.success-toast > .Toastify__progress-bar-theme--light {
+  background: #7fee7d;
+}
+
+.Toastify__toast {
+  width: 292px;
+  min-height: 38px;
+  font-family: 'Roboto';
+  padding: 0px 8px 0px 0px;
+  border-radius: 0%;
+  text-align: left;
+}
+
+.Toastify__close-button {
+  align-self: center;
+  opacity: 1;
+}
+
+.Toastify__progress-bar {
+  width: 9px;
+  height: 38px;
+  /* background-color: #7fee7d; */
+  /* animation: none; */
+}
+
+.Toastify__toast-theme--light {
+  color: #0d0d0d;
+}
+
+.Toastify__toast-body {
+  padding: 0px 0px 0px 18px;
+}
+
+/* .Toastify__progress-bar--animated {
+  animation: Toastify__trackProgress linear 1 forwards;
+  animation-name: Toastify__trackProgress;
+  animation-duration: 0s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-timeline: ;
+} */
+/* .Toastify__progress-bar-theme--light {
+  background: #7fee7d;
+} */
+
+.successToast {
+  background: #ec5248;
+}
